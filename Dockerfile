@@ -1,4 +1,4 @@
-FROM devops-bookstack
+FROM solidnerd/bookstack
 
 ENV DB_HOST=devops-bookstackdb:3306
 
