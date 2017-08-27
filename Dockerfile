@@ -1,6 +1,6 @@
 FROM solidnerd/bookstack
 
-ENV DB_HOST=devops-bookstackdb:3306
+ENV DB_HOST=devops-bookstackdb
 
 ENV DB_DATABASE=bookstack
 
