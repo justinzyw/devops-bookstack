@@ -10,6 +10,7 @@ currentTime()
 }
 
 sudo docker service scale devops-bookstack=0
+sudo docker service scale devops-bookstackdb=0
 
 echo ---$(currentTime)---populate the volumes---
 #to zip, use: sudo tar zcvf devops_bookstack_volume.tar.gz /var/nfs/volumes/devops_bookstack*
@@ -40,4 +41,5 @@ volume-driver=local-persist,volume-opt=mountpoint=/var/nfs/volumes/devops_bookst
 --constraint 'node.role == manager' \
 $BOOKSTACK_IMAGE
 
+sudo docker service scale devops-bookstackdb=1
 sudo docker service scale devops-bookstack=1
