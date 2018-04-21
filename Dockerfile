@@ -1,4 +1,4 @@
-FROM solidnerd/bookstack
+FROM solidnerd/bookstack:0.20.3
 
 ENV DB_HOST=devops-bookstackdb
 ENV DB_DATABASE=bookstack
